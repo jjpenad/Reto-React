@@ -1,0 +1,49 @@
+{
+	"preventDefault": true,
+	"groups": [
+		{
+			"label": "Email",
+			"control": {
+				"type": "email",
+				"id": "email",
+				"name": "email"
+			}
+		},
+
+		{
+			"label": "Password",
+			"control": {
+				"type": "password",
+				"id": "password",
+				"name": "password"
+			}
+		},
+
+		{
+			"label": "Date",
+			"control": {
+				"type": "date",
+				"id": "date",
+				"name": "date"
+			}
+		},
+
+		{
+			"label": "Acknowledge",
+			"control": {
+				"type": "checkbox",
+				"id": "checkbox",
+				"name": "checkbox"
+			}
+		},
+
+		{
+			"label": "Radio",
+			"control": {
+				"type": "radio",
+				"id": "radio",
+				"name": "radio"
+			}
+		}
+	]
+}
