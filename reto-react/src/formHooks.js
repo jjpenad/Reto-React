@@ -1,13 +1,21 @@
 import { useState } from 'react';
 
-const useRForm = () => {
+const useRForm = (schema) => {
 	const [ inputs, setInputs ] = useState({});
+	const [ errors, setErrors ] = useState('');
 
 	const handleSubmit = (preventDefault, event) => {
 		//Prevents the form from refreshing the page after submitted
 		if (preventDefault) event.preventDefault();
 
-		console.log('submit!!!');
+		const { error } = validate();
+		if (!error) {
+			console.log('Form submited!!!');
+		}
+		else {
+			console.log('Errors', error);
+			setErrors(error);
+		}
 	};
 
 	const handleInputChange = (event) => {
@@ -15,7 +23,13 @@ const useRForm = () => {
 		setInputs({ ...inputs, [event.target.name]: event.target.value });
 	};
 
-	return { handleSubmit, handleInputChange };
+	const validate = () => {
+		if (schema !== null) {
+			return schema.validate(inputs);
+		}
+	};
+
+	return { handleSubmit, handleInputChange, errors };
 };
 
 export default useRForm;

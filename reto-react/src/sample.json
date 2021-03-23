@@ -7,15 +7,26 @@
 				"type": "email",
 				"id": "email",
 				"name": "email"
+			},
+			"verifications": {
+				"dataType": "string",
+				"min": 6,
+				"max": 40,
+				"required": true
 			}
 		},
-
 		{
 			"label": "Password",
 			"control": {
 				"type": "password",
 				"id": "password",
 				"name": "password"
+			},
+			"verifications": {
+				"dataType": "string",
+				"min": 10,
+				"max": 40,
+				"required": true
 			}
 		},
 
@@ -43,6 +54,18 @@
 				"type": "radio",
 				"id": "radio",
 				"name": "radio"
+			}
+		},
+
+		{
+			"label": "Numbers",
+			"control": {
+				"type": "number",
+				"id": "number",
+				"name": "number"
+			},
+			"verifications": {
+				"dataType": "number"
 			}
 		}
 	]
